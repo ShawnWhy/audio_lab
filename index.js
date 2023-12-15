@@ -12,8 +12,17 @@ app.get("/", (req, res) => {
 app.get("/script.js", (req, res) => {
   res.sendFile(path.join(__dirname, "script.js"));
 });
+app.get("/script2.js", (req, res) => {
+  res.sendFile(path.join(__dirname, "script2.js"));
+});
 app.get("/candy.mp3", (req, res) => {
   res.sendFile(path.join(__dirname, "candie.mp3"));
+});
+app.get("/luteplay.mp3", (req, res) => {
+  res.sendFile(path.join(__dirname, "luteplay.mp3"));
+});
+app.get("./luteplay.mp3", (req, res) => {
+  res.sendFile(path.join(__dirname, "luteplay.mp3"));
 });
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
