@@ -1,15 +1,20 @@
 //audio api
 window.AudioContext = window.AudioContext || window.webkitAudioContext;
 
-const context = new AudioContext();
+const context = new AudioContext({
+  latencyHint: "interactive",
+  sampleRate: 44100,
+  sinkId: "bb04fea9a8318c96de0bd...", // truncated for brevity
+});
 let audio1 = new Audio('/luteplay.mp3');
+      // audio1.play();
+
   // const audio1 = document.getElementById("audio2");
   // audio1.src = "luteplay.mp3";
-let audioSource = context.createMediaElementSource(audio1);
+// let audioSource = context.createMediaElementSource(audio1);
 //     audioSource.connect(context.destination);
 //     console.log(context.destination)
 //     console.log(audioSource)
-      // audio1.play();
 
   
 // audio1.src = './luteplay.mp3'
@@ -39,21 +44,21 @@ console.log("play")
   // setTimeout(() => {
   //   audio1.pause()
   // }, 2500);
-  // audioSource = context.createMediaElementSource(audio1);
-  // audioSource.connect(context.destination)
-  // console.log(audioSource)
-  // analyzer = context.createAnalyser();
-  // audioSource.connect(analyzer);
-  // analyzer.connect(context.destination);
-  // analyzer.fftSize = 64;
-  // console.log(analyzer)
-  // console.log(audioSource)
-  // const bufferLength = analyzer.frequencyBinCount;
-  // const dataArray = new Uint8Array(bufferLength);
+  audioSource = context.createMediaElementSource(audio1);
+  audioSource.connect(context.destination)
+  console.log(audioSource)
+  analyzer = context.createAnalyser();
+  audioSource.connect(analyzer);
+  analyzer.connect(context.destination);
+  analyzer.fftSize = 64;
+  console.log(analyzer)
+  console.log(audioSource)
+  const bufferLength = analyzer.frequencyBinCount;
+  const dataArray = new Uint8Array(bufferLength);
 
-  // const barWidth = canvas.width / bufferLength;
-  // let barHeight;
-  // let x = 0;
+  const barWidth = canvas.width / bufferLength;
+  let barHeight;
+  let x = 0;
 
   function animate() {
     x=0
@@ -61,14 +66,18 @@ console.log("play")
     visualContext.clearRect(0, 0, canvas.width, canvas.height);
     analyzer.getByteFrequencyData(dataArray);
     for (let i = 0; i < bufferLength; i++) {
+      if(dataArray[i]>80){
       barHeight = dataArray[i];
-      visualContext.fillStyle = "white";
+      
+      visualContext.fillStyle = "black";
       visualContext.fillRect(x, canvas.height - barHeight, barWidth, barHeight);
+      }
       x += barWidth;
+    
     }
     requestAnimationFrame(animate);
   }
-  // animate();
+  animate();
 });
 
 

@@ -5,25 +5,29 @@ var port = process.env.PORT || 3000;
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(express.static("local"));
 
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "local", "index.html"));
+});
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "index.html"));
 });
-app.get("/script.js", (req, res) => {
-  res.sendFile(path.join(__dirname, "script.js"));
-});
-app.get("/script2.js", (req, res) => {
-  res.sendFile(path.join(__dirname, "script2.js"));
-});
-app.get("/candy.mp3", (req, res) => {
-  res.sendFile(path.join(__dirname, "candie.mp3"));
-});
-app.get("/luteplay.mp3", (req, res) => {
-  res.sendFile(path.join(__dirname, "luteplay.mp3"));
-});
-app.get("./luteplay.mp3", (req, res) => {
-  res.sendFile(path.join(__dirname, "luteplay.mp3"));
-});
+// app.get("/script.js", (req, res) => {
+//   res.sendFile(path.join(__dirname, "script.js"));
+// });
+// app.get("/script2.js", (req, res) => {
+//   res.sendFile(path.join(__dirname, "script2.js"));
+// });
+// app.get("/candy.mp3", (req, res) => {
+//   res.sendFile(path.join(__dirname, "candie.mp3"));
+// });
+// app.get("/luteplay.mp3", (req, res) => {
+//   res.sendFile(path.join(__dirname, "luteplay.mp3"));
+// });
+// app.get("./luteplay.mp3", (req, res) => {
+//   res.sendFile(path.join(__dirname, "luteplay.mp3"));
+// });
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
