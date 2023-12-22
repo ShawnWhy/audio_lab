@@ -59,18 +59,27 @@ console.log("play")
   const barWidth = canvas.width / bufferLength;
   let barHeight;
   let x = 0;
-
+  const svgText = 
   function animate() {
     x=0
     // console.log("animate");
     visualContext.clearRect(0, 0, canvas.width, canvas.height);
     analyzer.getByteFrequencyData(dataArray);
     for (let i = 0; i < bufferLength; i++) {
-      if(dataArray[i]>120){
-      barHeight = dataArray[i];
+      if(dataArray[i]>80){
+      let img = new Image();
+      img.src = `data:image/svg+xml,${encodeURIComponent(svgText)}`;
+      img.onload= function(){
+        barHeight = dataArray[i];
+       visualContext.fillStyle = "white";
+
+        visualContext.drawImage(x, img, barWidth, barHeight)
+
+      }
+      // barHeight = dataArray[i];
       
-      visualContext.fillStyle = "white";
-      visualContext.fillRect(x, canvas.height - barHeight, barWidth, barHeight);
+      // visualContext.fillStyle = "white";
+      // visualContext.fillRect(x, canvas.height - barHeight, barWidth, barHeight);
       }
       x += barWidth;
     

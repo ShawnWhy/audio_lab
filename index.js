@@ -1,17 +1,17 @@
 const express = require("express");
 var path = require("path");
 const app = express();
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 3030;
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static("local"));
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "local", "index.html"));
+  res.sendFile(path.join(__dirname, "local", "index copy.html"));
 });
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "index.html"));
+  res.sendFile(path.join(__dirname, "index copy.html"));
 });
 // app.get("/script.js", (req, res) => {
 //   res.sendFile(path.join(__dirname, "script.js"));

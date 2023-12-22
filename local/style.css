@@ -5,6 +5,7 @@
 
 body{
     background-color: black;
+    overflow: hidden;
 }
 
 *{
@@ -17,7 +18,7 @@ body{
     position:absolute;
     top:0;
     left:0;
-    background-color: black;
+    /* background-color: black; */
     height:100%;
     width:100%
 }
@@ -37,8 +38,285 @@ body{
 #house{
     position:absolute;
     height:40%;
-    width:auto;
+    width:60%;
     top:50%;
     left:50%;
-    background-image: url('/local/images/');
+    background-image: url('./images/housenormal.svg');
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
+.houseSqueeze{
+ 
+    background-image: url('./images/houseSqueeze.svg') ! important;
+
+}
+#house:hover{
+        background-image: url('./images/houseSqueeze.svg');
+
+}
+
+.smallCake{
+    height:20%;
+    width:20%;
+    background-position: left;
+    position:absolute;
+    left:10%; 
+    top:-5%;    
+     transform-origin: center;
+
+
+}
+.smallCakeInner{
+    height:100%;
+    width:100%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position:absolute;
+    transform-origin: center;
+
+
+}
+.smallCake0{
+
+    animation:cakeRotate1 2s infinite;
+
+}
+.smallCake1{
+
+    animation:cakeRotate2 2s infinite;
+
+}
+
+.smallCake2{
+
+    animation:cakeRotate1 2s infinite;
+
+}
+
+.smallCake3{
+
+    animation:cakeRotate2 2s infinite;
+
+}
+.smallCake4{
+
+    animation:cakeRotate1 2s infinite;
+
+}
+.smallCake5{
+
+    animation:cakeRotate2 2s infinite;
+
+}
+.smallCake6{
+
+    animation:cakeRotate1 2s infinite;
+
+}
+.largeCake{
+        height:35%;
+    width:35%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position:absolute;
+    left:0%; 
+    top:-5%;    
+    transform-origin: center;
+    background-image: url('./images/fullcake.svg');
+    animation:shootCake 2s both;
+
+
+}
+@keyframes shootCake {
+    0%{transform: translate(0, 0);}
+    30%{transform: translate(0%, -190%);}
+ 
+}
+
+
+@keyframes smallCake1 {
+    0%{transform: translate(0, 0);}
+    30%{transform: translate(10%, -150%);}
+    100%{transform: translate(40%,1000% );}
+    
+}
+@keyframes smallCake2 {
+    0%{transform: translate(0, 0);}
+    30%{transform: translate(50%, -140%);}
+    100%{transform: translate(80%,1000% );}
+    
+}
+@keyframes smallCake3 {
+    0%{transform: translate(0, 0);}
+    30%{transform: translate(-20%, -170%);}
+    100%{transform: translate(-40%,1000% );}
+    
+}
+@keyframes smallCake4 {
+    0%{transform: translate(0, 0);}
+    30%{transform: translate(40%, -160%);}
+    100%{transform: translate(60%,1000% );}
+    
+}
+@keyframes smallCake5 {
+    0%{transform: translate(0, 0);}
+    30%{transform: translate(-30%, -150%);}
+    100%{transform: translate(-50%,1000% );}
+    
+}
+
+@keyframes smallCake0 {
+    0%{transform: translate(0, 0);}
+    30%{transform: translate(-10%, -100%);}
+    100%{transform: translate(-16%,1000% );}
+    
+}
+
+@keyframes cakeRotate1 {
+    0%{transform: rotate(0deg)}
+    100%{transform: rotate(360deg)}
+    
+}
+
+@keyframes cakeRotate2 {
+    0%{transform: rotate(0deg)}
+    50%{transform: rotate(-180deg);}
+    100%{transform: rotate(360deg)}
+    
+}
+
+.cakePiece1{
+    height:20%;
+    width:20%;
+    background-position: left;
+    position:absolute;
+    left:10%; 
+    top:-5%;    
+     background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position:absolute;
+    transform-origin: center;
+    background-image: url('./images/slice1.svg');
+
+
+}
+.cakePiece2{
+    height:20%;
+    width:20%;
+    background-position: left;
+    position:absolute;
+    left:10%; 
+    top:-5%;    
+     background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position:absolute;
+    transform-origin: center;
+    background-image: url('./images/slice2.svg');
+
+
+}
+
+.cakePiece3{
+    height:20%;
+    width:20%;
+    background-position: left;
+    position:absolute;
+    left:10%; 
+    top:-5%;    
+     background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position:absolute;
+    transform-origin: center;
+    background-image: url('./images/slice3.svg');
+
+
+}
+
+.cakePiece4{
+    height:20%;
+    width:20%;
+    background-position: left;
+    position:absolute;
+    left:10%; 
+    top:-5%;    
+     background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position:absolute;
+    transform-origin: center;
+    background-image: url('./images/slice4.svg');
+
+
+}
+
+.cakePiece5{
+    height:20%;
+    width:20%;
+    background-position: left;
+    position:absolute;
+    left:10%; 
+    top:-5%;    
+     background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position:absolute;
+    transform-origin: center;
+    background-image: url('./images/slice5.svg');
+
+
+}
+.cakePiece6{
+    height:20%;
+    width:20%;
+    background-position: left;
+    position:absolute;
+    left:10%; 
+    top:-5%;    
+     background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position:absolute;
+    transform-origin: center;
+    background-image: url('./images/slice6.svg');
+
+
+}
+.cakePiece7{
+    height:20%;
+    width:20%;
+    background-position: left;
+    position:absolute;
+    left:10%; 
+    top:-5%;    
+     background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position:absolute;
+    transform-origin: center;
+    background-image: url('./images/slice7.svg');
+
+
+}
+.cakePiece8{
+    height:20%;
+    width:20%;
+    background-position: left;
+    position:absolute;
+    left:10%; 
+    top:-5%;    
+     background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position:absolute;
+    transform-origin: center;
+    background-image: url('./images/slice8.svg');
+
+
+}
+
+
