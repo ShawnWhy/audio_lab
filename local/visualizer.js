@@ -140,7 +140,7 @@ function shootSmallCake(number) {
         $(fullCakes).each((index, value) => {
           // console.log($(value).css("top").split("px")[0]);
 
-          // $(value).remove();
+          $(value).remove();
           for (i = 0; i <= 8; i++) {}
         });
       }, 1500);
@@ -169,7 +169,7 @@ setInterval(() => {
     // console.log($(value).css("top").split("px")[0]);
     console.log($(value).offset().top);
     if ($(value).offset().top > 600) {
-      // $(value).remove();
+      $(value).remove();
     }
   });
 }, 500);
