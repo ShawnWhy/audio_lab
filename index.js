@@ -8,10 +8,10 @@ app.use(express.json());
 app.use(express.static("local"));
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "local", "index copy.html"));
+  res.sendFile(path.join(__dirname, "local", "indexcake.html"));
 });
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "index copy.html"));
+  res.sendFile(path.join(__dirname, "indexcake.html"));
 });
 // app.get("/script.js", (req, res) => {
 //   res.sendFile(path.join(__dirname, "script.js"));

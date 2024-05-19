@@ -36,7 +36,7 @@ const cakeUrls = [
 ];
 
 // let analyzer;
-function shootSmallCake(number){
+function shootSmallCake2(number){
   if(number){
   if($("#house").hasClass("houseSqueeze")){
     $("#house").removeClass("houseSqueeze")

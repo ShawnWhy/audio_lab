@@ -125,13 +125,13 @@ body{
     top:-5%;    
     transform-origin: center;
     background-image: url('./images/fullcake.svg');
-    animation:shootCake 2s both;
+    animation:shootCake .5s both;
 
 
 }
 @keyframes shootCake {
     0%{transform: translate(0, 0);}
-    30%{transform: translate(0%, -190%);}
+    100%{transform: translate(0%, -100px);}
  
 }
 
