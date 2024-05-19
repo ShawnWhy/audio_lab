@@ -78,7 +78,13 @@ const sliceUrls = [
 // })
 
 function shootLargeCake(){
+   if ($("#house").hasClass("houseSqueeze")) {
+          $("#house").removeClass("houseSqueeze");
+   } else {
+          $("#house").addClass("houseSqueeze");
+        }
    let newCake = $("<div>");
+
    newCake.addClass("largeCake");
    // console.log(cakeUrls[rand2]);
    // newCake.css("animation", "smallCake" + rand1 + " 1s both");

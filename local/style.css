@@ -51,10 +51,10 @@ body{
     background-image: url('./images/houseSqueeze.svg') ! important;
 
 }
-#house:hover{
+/* #house:hover{
         background-image: url('./images/houseSqueeze.svg');
 
-}
+} */
 
 .smallCake{
     height:20%;
