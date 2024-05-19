@@ -145,20 +145,20 @@ body{
 }
 @keyframes smallCake2 {
     0%{transform: translate(0, 0);}
-    30%{transform: translate(50%, -140%);}
+    30%{transform: translate(30%, -140%);}
     100%{transform: translate(80%,1000% );}
     
 }
 @keyframes smallCake3 {
     0%{transform: translate(0, 0);}
-    30%{transform: translate(-20%, -170%);}
-    100%{transform: translate(-40%,1000% );}
+    30%{transform: translate(-40%, -170%);}
+    100%{transform: translate(-140%,1000% );}
     
 }
 @keyframes smallCake4 {
     0%{transform: translate(0, 0);}
-    30%{transform: translate(40%, -160%);}
-    100%{transform: translate(60%,1000% );}
+    30%{transform: translate(60%, -160%);}
+    100%{transform: translate(160%,1000% );}
     
 }
 @keyframes smallCake5 {
@@ -170,8 +170,8 @@ body{
 
 @keyframes smallCake0 {
     0%{transform: translate(0, 0);}
-    30%{transform: translate(-10%, -100%);}
-    100%{transform: translate(-16%,1000% );}
+    30%{transform: translate(-45%, -100%);}
+    100%{transform: translate(-150%,1000% );}
     
 }
 
@@ -330,9 +330,9 @@ body{
 
     }
     .smallCake{
-      left:50% ! important;   
+      left:45% ! important;   
     }
     .largeCake{
-        left:50% ! important;
+        left:40% ! important;
     }
 }
